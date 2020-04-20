@@ -14,6 +14,9 @@ def index(request):
 
 
 def store_feeds(request):
+    form = RSSSourcesFileForm()
+    context = {"title": "Store RSS Feeds", "form": form}
+
     if request.method == 'POST':
         form = RSSSourcesFileForm(request.POST, request.FILES)
         if form.is_valid():
