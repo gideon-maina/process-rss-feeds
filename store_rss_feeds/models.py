@@ -13,6 +13,9 @@ class RSSSource(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True, )
 
+    def __str__(self):
+        return f"RSSSource {self.publisher} :> {self.url}"
+
 
 class RSSFeedArticle(models.Model):
     id = models.AutoField(primary_key=True)
@@ -26,3 +29,6 @@ class RSSFeedArticle(models.Model):
     last_refresh = models.DateTimeField(auto_now=True, )
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True, )
+
+    def __str__(self):
+        return f"RSSFeedArticle from {self.rss_source.publisher} :> {self.title}"

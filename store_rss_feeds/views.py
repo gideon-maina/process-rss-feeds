@@ -9,7 +9,6 @@ from .forms import RSSSourcesFileForm
 
 
 def index(request):
-
     context = {"title": "Welcome to RSS processor"}
     return render(request, "index.html", context=context)
 
@@ -27,10 +26,10 @@ def store_feeds(request):
             messages.add_message(request, messages.INFO, mess)
             return redirect("store_feeds")
         else:
-            print("Form is invalid")
+            context = {"title": "Store RSS Feeds", "form": form}
+            return render(request, 'store-feeds.html', context=context)
     else:
         form = RSSSourcesFileForm()
-        context = {"title": "Store RSS Feeds", "form": form}
         return render(request, 'store-feeds.html', context=context)
 
 

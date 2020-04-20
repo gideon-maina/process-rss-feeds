@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import RSSSource, RSSFeedArticle
+
+admin.site.register(RSSSource)
+admin.site.register(RSSFeedArticle)

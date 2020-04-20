@@ -1,4 +1,6 @@
+import datetime
 from xml.etree import ElementTree
+
 import dateparser
 import requests
 from django.contrib import messages
@@ -49,6 +51,9 @@ def refresh_feeds(request):
                     # Save it this is the first run
                     new_articles += 1
                     article.save()
+            # Update last refresh date for the sources
+            RSSSource.objects.filter(id=source.id).update(
+                last_refresh=datetime.datetime.now())
 
     context = {'title': "Refreshing Feed Articles"}
     messages.add_message(
