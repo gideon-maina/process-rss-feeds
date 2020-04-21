@@ -1,6 +1,6 @@
 publisher, url
-cnn, http://rss.cnn.com/rss/edition_motorsport.rss
-bbc, http://feeds.bbci.co.uk/news/video_and_audio/technology/rss.xml
-bbc,http://feeds.bbci.co.uk/news/business/rss.xml
+cnn-motorsport, http://rss.cnn.com/rss/edition_motorsport.rss
+bbc-technology, http://feeds.bbci.co.uk/news/video_and_audio/technology/rss.xml
+bbc-business,http://feeds.bbci.co.uk/news/business/rss.xml
 nypost,https://nypost.com/feed/
 bbc-africa,http://feeds.bbci.co.uk/news/world/africa/rss.xml
