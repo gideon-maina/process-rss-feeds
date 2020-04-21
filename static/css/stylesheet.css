@@ -1,49 +1,25 @@
-body{  
-    font-family:Georgia, Arial, Helvetica, Sans-serif,serif;
-    font-size:15px;
-    color:#000;
-    background:#fff;
-}
+ @charset "utf-8";
  
-h1 {
-    font-size:50px;
-}
- 
-h3 {
-    font-size:22px;
-}
- 
-#content-wrapper {
-    width:960px;
-    text-align:left;
-    margin:0 auto;
-    background:#fff;
-    padding:15px;
-     
-}
- 
-#header{
-    width:960px;
-    height:120px;
-}
- 
-#post-content {
-    float:left;
-    width:600px;
-    padding:0 15px 15px 15px;
-}
- 
-.sidebar{
-    float:left;
-    width:300px;
-    margin:0 0 0 15px;
-    font-size:15px;
-    list-style:none;
-}
- 
-#footer{
-    height: 60px;
-    background: #fff;
-    padding: 15px;
-    clear:both;
-}
+ html, body {
+ margin: 0px;
+ padding: 0px;
+ border: 0px;
+ color: #000;
+ background: #fff;
+ }
+ html, body, p, th, td, li, dd, dt {
+ font: 1em Arial, Helvetica, sans-serif;
+ }
+ h1, h2, h3, h4, h5, h6 {
+ font-family: Arial, Helvetica, sans-serif;
+ }
+ h1 { font-size: 2em; }
+ h2 { font-size: 1.5em; }
+ h3 { font-size: 1.2em ; }
+ h4 { font-size: 1.0em; }
+ h5 { font-size: 0.9em; }
+ h6 { font-size: 0.8em; }
+ a:link { color: #00f; }
+ a:visited { color: #009; }
+ a:hover { color: #06f; }
+ a:active { color: #0cf; }
