@@ -58,7 +58,6 @@ def store_rss_feeds(request_source_file):
                     publisher=publisher,
                     url=url,
                 )
-                print(source)
                 source.save()
                 saved_sources_count += 1
             except IntegrityError:

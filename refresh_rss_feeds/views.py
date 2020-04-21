@@ -54,6 +54,11 @@ def refresh_feeds(request):
             # Update last refresh date for the sources
             RSSSource.objects.filter(id=source.id).update(
                 last_refresh=datetime.datetime.now())
+            # Update the last build date for the sources
+            last_build_date = xml_data.find('channel/lastBuildDate')
+            last_build_date = dateparser.parse(last_build_date.text)
+            RSSSource.objects.filter(id=source.id).update(
+                last_build_date=last_build_date)
 
     context = {'title': "Refreshing Feed Articles"}
     messages.add_message(

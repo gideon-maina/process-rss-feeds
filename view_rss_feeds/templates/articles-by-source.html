@@ -13,18 +13,12 @@
 </head>
 
 <body>
-    <h1> Viewing Articles from the saved feeds </h1>
+    <h1> Viewing Articles for publisher id {{ publisher_id }}</h1>
     <ul>
         {% for article in object_list %}
         <li>{{ article.pubdate|date }} -<a href="{{ article.link }}"> {{ article.title }} </a> - From {{ article.rss_source.publisher }}</li>
         {% empty %}
         <li>No articles yet.</li>
-        {% endfor %}
-    </ul>
-    <h2> Alternatively view articles by publisher below </h2>
-    <ul>
-        {% for p in publishers %}
-        <li> <a href="{% url 'articles-list-by-source-id' publisher_id=p.id %}"> {{ p.publisher }} </a> last publisher update <i>{{ p.last_build_date}} </i> </li>
         {% endfor %}
     </ul>
     <div class="pagination">
